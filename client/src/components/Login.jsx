@@ -4,6 +4,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { app } from '../config/firebase.config'
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 const Login = ({setAuth}) => {
@@ -30,6 +31,12 @@ const Login = ({setAuth}) => {
             }
         })
     }
+
+useEffect(() => {
+if(window.localStorage.getItem(("auth") === "true")){
+    navigate("/", {replace : true})
+}
+}, [] )
   return (
     <div className=' relative w-screen h-screen'>
         <div className='absolute inset-0 bg-darkOverlay flex items-center justify-center p-4'>
