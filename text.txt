@@ -1,0 +1,1 @@
+added package firebase-admin in server/fırebaseconfig
