@@ -4,6 +4,7 @@ import { Login, Home } from "./components/index";
 import { useState } from "react";
 import { app } from "./config/firebase.config";
 import { getAuth } from "firebase/auth";
+import {AnimatePresence} from "framer-motion"
 
 const App = () => {
   const firebaseAuth = getAuth(app);
@@ -28,13 +29,19 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <Routes>
-        <Route path="/Login" element={<Login setAuth={setAuth} />} />
-        <Route path="/*" element={<Home />} />
-      </Routes>
-    </div>
-  );
-};
+      <AnimatePresence>
+        <div className="h-auto flex items-center justify-center min-w-[680px]">
+          
+          <Routes>
+            <Route path="/login" element={<Login setAuth={setAuth} />} />
+            <Route path="/*" element={<Home />} />
+           
+          </Routes>
+  
+          
+        </div>
+      </AnimatePresence>
+    );
+  }
 
 export default App;
