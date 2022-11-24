@@ -5,6 +5,7 @@ import { useState } from "react";
 import { app } from "./config/firebase.config";
 import { getAuth } from "firebase/auth";
 import {AnimatePresence} from "framer-motion"
+import {validateUser} from "./api"
 
 const App = () => {
   const firebaseAuth = getAuth(app);
@@ -18,7 +19,10 @@ const App = () => {
     firebaseAuth.onAuthStateChanged((userCred) => {
       if (userCred) {
         userCred.getIdToken().then((token) => {
-          console.log(token);
+          validateUser(token).then((data) => {
+            console.log(data)
+          })
+
         });
       } else {
         setAuth(false);

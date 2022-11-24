@@ -6,6 +6,8 @@ require("dotenv/config");
 const cors = require("cors")
 const {default : mongoose} = require("mongoose")
 
+app.use(cors({origin : true}))
+
 
 app.get("/", (req, res) => {
     return res.json("hi there...")
