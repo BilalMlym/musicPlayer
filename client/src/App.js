@@ -6,7 +6,7 @@ import { app } from "./config/firebase.config";
 import { getAuth } from "firebase/auth";
 import { AnimatePresence } from "framer-motion";
 import { validateUser } from "./api";
-import { useStateValue } from "./Context/stateProvider";
+import { useStateValue } from "./Context/StateProvider";
 import { actionType } from "./Context/reducer";
 
 
@@ -15,7 +15,7 @@ const App = () => {
   const firebaseAuth = getAuth(app);
   const navigate = useNavigate();
 
-  const [{user}, dispatch] = useStateValue()
+  const [{user}, dispatch] = useStateValue();
 
   const [auth, setAuth] = useState(
     false || window.localStorage.getItem("auth") === "true"

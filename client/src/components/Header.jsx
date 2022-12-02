@@ -2,7 +2,7 @@ import React from 'react'
 import {Logo , Avatar} from "../assets/img/index" 
 import {NavLink} from "react-router-dom"
 import {FaCrown } from "react-icons/fa"
-import { useStateValue } from '../Context/stateProvider'
+import { useStateValue } from '../Context/StateProvider'
 
 import { isActiveStyles , isNotActiveStyles} from '../utils/styles'
 
