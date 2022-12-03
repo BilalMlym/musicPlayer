@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { Login, Home } from "./components/index";
+import { Login, Home, Dashboard } from "./components/index";
 import { useState } from "react";
 import { app } from "./config/firebase.config";
 import { getAuth } from "firebase/auth";
@@ -51,6 +51,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login setAuth={setAuth} />} />
           <Route path="/*" element={<Home />} />
+          <Route path="/dashboard/*" element={<Dashboard />} />
         </Routes>
       </div>
     </AnimatePresence>
