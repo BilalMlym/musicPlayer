@@ -9,3 +9,14 @@ Unlike the Fetch API, which requires you to check the status code and throw the 
 What is dispatch method?
 
 dispatch is a function of the Redux store. You call store. dispatch to dispatch an action. This is the only way to trigger a state change. With React Redux, your components never access the store directly - connect does it for you.
+
+
+What is Express js?
+(react içerisinde çoklu pencereyle çalışmayı sağlamaktadır.)
+Express js is a node js web application framework that provides broad features for building web and mobile applications. It is used to create a single page, multipage, and hybrid web application. Express js is high-performance, fast, unopinionated, and lightweight.
+
+It’s a layer built on top of node js that helps manage servers and routes. 
+
+
+.params fuction is isolate the specific value
+
