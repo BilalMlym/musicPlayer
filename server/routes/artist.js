@@ -5,6 +5,7 @@ const router = require("express").Router()
 const artist = require("../models/artist")
 
 
+
 router.post("/save", async (req , res) =>{
     const newArtist = artist({
         name: req.body.name,
@@ -21,8 +22,35 @@ router.post("/save", async (req , res) =>{
      }
 })
 
-router.get("/getOne/:id" , async (req, res) =>{
-    return res.json(req.params.id)
-})
+router.get("/getOne/:getOne", async (req, res) => {
+    const filter = { _id: req.params.getOne };
+  
+    const cursor = await artist.findOne(filter);
+  
+    if (cursor) {
+      res.status(200).send({ success: true, data: cursor });
+    } else {
+      res.status(200).send({ success: true, msg: "No Data Found" });
+    }
+  });
+
+
+router.get("/getAll", async (req, res) => {
+    const options = {
+      // sort returned documents in ascending order
+      sort: { createdAt: 1 },
+      // Include only the following
+      // projection : {}
+    };
+  
+    const cursor = await artist.find(options);
+    if (cursor) {
+      res.status(200).send({ success: true, data: cursor });
+    } else {
+      res.status(200).send({ success: true, msg: "No Data Found" });
+    }
+  });
+
+
 
 module.exports = router;
