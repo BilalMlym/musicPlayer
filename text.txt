@@ -3,3 +3,4 @@ added package firebase-admin in server/fırebaseconfig
 22-11-22 framer motion added in music-player folder(windows)
          axios added in music player
 
+04-12-22 Check 403 error for header profile picture does not fetching

@@ -53,6 +53,7 @@ const App = () => {
           <Route path="/*" element={<Home />} />
           <Route path="/dashboard/*" element={<Dashboard />} />
         </Routes>
+        
       </div>
     </AnimatePresence>
   );

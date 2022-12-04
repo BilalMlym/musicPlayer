@@ -17,6 +17,12 @@ app.get("/", (req, res) => {
 const userRoute = require("./routes/auth")
 app.use("/api/users", userRoute)
 
+//album routes
+
+//artist routes
+
+//song routes 
+
 mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true });
 mongoose.connection
   .once("open", () => console.log("Connected"))
@@ -24,4 +30,4 @@ mongoose.connection
     console.log(`Error : ${error}`);
   });
 
-app.listen(4000, () => console.log("lisitening to port 4000"));
+app.listen(4000, () => console.log("listening to port 4000"));
