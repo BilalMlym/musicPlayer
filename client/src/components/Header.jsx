@@ -74,9 +74,10 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
-      <div className="flex items-center ml-auto cursor-pointer gap-2 relative"
-      onMouseEnter={() => setIsMenu(true)}
-      onMouseLeave={() => setIsMenu(false)}
+      <div
+        className="flex items-center ml-auto cursor-pointer gap-2 relative"
+        onMouseEnter={() => setIsMenu(true)}
+        onMouseLeave={() => setIsMenu(false)}
       >
         <img
           src={user?.user?.imageURL || Avatar}
@@ -94,7 +95,7 @@ const Header = () => {
             <FaCrown className="text-sm -ml-1 text-yellow-500" />
           </p>
         </div>
-            
+
         {isMenu && (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -110,16 +111,14 @@ const Header = () => {
             <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
               Favourites
             </p>
-           {
-            user?.user?.role === "admin"  && (
+            {user?.user?.role === "admin" && (
               <NavLink to={"/dashboard/home"}>
-            <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
-              Dashboard
-            </p>
-            </NavLink>
-            )
-           } 
-          
+                <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+                  Dashboard
+                </p>
+              </NavLink>
+            )}
+
             <hr />
             <p
               className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out"

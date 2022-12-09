@@ -53,6 +53,11 @@ if(window.localStorage.getItem(("auth") === "true")){
     navigate("/", {replace : true})
 }
 }, [] )
+
+
+
+
+
   return (
     <div className=' relative w-screen h-screen'>
         <video
