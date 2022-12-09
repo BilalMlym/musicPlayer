@@ -16,6 +16,7 @@ const App = () => {
   const navigate = useNavigate();
 
   const [{user}, dispatch] = useStateValue();
+  
 
   const [auth, setAuth] = useState(
     false || window.localStorage.getItem("auth") === "true"
@@ -49,7 +50,7 @@ const App = () => {
     <AnimatePresence>
       <div className="h-auto flex items-center justify-center min-w-[680px]">
         <Routes>
-          <Route path="/login" element={<Login setAuth={setAuth} />} />
+          <Route path="/Login" element={<Login setAuth={setAuth} />} />
           <Route path="/*" element={<Home />} />
           <Route path="/dashboard/*" element={<Dashboard />} />
         </Routes>

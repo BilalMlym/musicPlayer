@@ -7,6 +7,7 @@ import { StateProvider } from "./Context/StateProvider";
 import { initialState } from "./Context/initialState";
 import reducer from "./Context/reducer";
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
