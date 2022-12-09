@@ -1,6 +1,3 @@
-// react-head added 
-
-
 added package firebase-admin in server/fırebaseconfig
 
 22-11-22 framer motion added in music-player folder(windows)
