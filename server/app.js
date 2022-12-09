@@ -6,6 +6,9 @@ require("dotenv/config");
 const cors = require("cors")
 const {default : mongoose} = require("mongoose")
 
+app.use(cors({origin : true}))
+app.use(express.json())
+
 
 app.get("/", (req, res) => {
     return res.json("hi there...")
@@ -15,6 +18,18 @@ app.get("/", (req, res) => {
 const userRoute = require("./routes/auth")
 app.use("/api/users", userRoute)
 
+//album routes
+const albumRoute = require("./routes/album")
+app.use("/api/album", albumRoute)
+
+//artist routes
+const artistRoute = require("./routes/artist")
+app.use("/api/artist", artistRoute)
+
+//song routes 
+const songRoute = require("./routes/song")
+app.use("/api/song", songRoute)
+
 mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true });
 mongoose.connection
   .once("open", () => console.log("Connected"))
@@ -22,4 +37,4 @@ mongoose.connection
     console.log(`Error : ${error}`);
   });
 
-app.listen(4000, () => console.log("lisitening to port 4000"));
+app.listen(4000, () => console.log("listening to port 4000"));

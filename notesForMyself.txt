@@ -1,0 +1,22 @@
+Why Axios?
+The next question you might have is why we are using Axios, given that we will need to install an additional library. Here are some reasons:
+
+Axios uses XMLHttpRequest under the hood, and it is widely supported by most browsers, including older ones like Internet Explorer 11. Fetch(), on the other hand, is only compatible with Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.3+ (you can see the full compatibly table on CanIUse.com).
+When sending requests, Axios automatically signifies the data, unlike fetch(), which requires us to do it manually.
+Unlike the Fetch API, which requires you to check the status code and throw the error yourself, Axios has better error handling and can throw 400 and 500 range errors.
+
+
+What is dispatch method?
+
+dispatch is a function of the Redux store. You call store. dispatch to dispatch an action. This is the only way to trigger a state change. With React Redux, your components never access the store directly - connect does it for you.
+
+
+What is Express js?
+(react içerisinde çoklu pencereyle çalışmayı sağlamaktadır.)
+Express js is a node js web application framework that provides broad features for building web and mobile applications. It is used to create a single page, multipage, and hybrid web application. Express js is high-performance, fast, unopinionated, and lightweight.
+
+It’s a layer built on top of node js that helps manage servers and routes. 
+
+
+.params fuction is isolate the specific value
+
