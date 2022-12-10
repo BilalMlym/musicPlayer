@@ -2,7 +2,7 @@ import React from "react";
 import { Logo, Avatar } from "../assets/img/index";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaCrown } from "react-icons/fa";
-import { useStateValue } from "../Context/StateProvider";
+import { useStateValue } from "../Context/stateProvider";
 import { getAuth } from "firebase/auth";
 import { app } from "../config/firebase.config";
 import { motion } from "framer-motion";

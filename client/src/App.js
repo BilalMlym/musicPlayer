@@ -6,7 +6,7 @@ import { app } from "./config/firebase.config";
 import { getAuth } from "firebase/auth";
 import { AnimatePresence } from "framer-motion";
 import { validateUser } from "./api";
-import { useStateValue } from "./Context/StateProvider";
+import { useStateValue } from "./Context/stateProvider";
 import { actionType } from "./Context/reducer";
 
 

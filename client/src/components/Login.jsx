@@ -5,7 +5,7 @@ import { app } from '../config/firebase.config'
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { useStateValue } from "../Context/StateProvider"
+import { useStateValue } from "../Context/stateProvider"
 import { validateUser } from '../api'
 import { actionType } from '../Context/reducer'
 
