@@ -11,6 +11,7 @@ import { actionType } from "./Context/reducer";
 
 
 
+
 const App = () => {
   const firebaseAuth = getAuth(app);
   const navigate = useNavigate();
