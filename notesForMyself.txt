@@ -31,3 +31,8 @@ The two components we'll be importing from react-helmet-async are called Helmet 
 
 HelmetProvider will wrap the entire app component in order to create context and prevent memory leaks. Therefore, this component will only need to be imported in the root App component.
 Helmet will be imported into any page component where you want to implement meta tags. Think of <Helmet> as the <head> tag for the page in question.
+
+
+
+
+// 54 mın lesson 4.2

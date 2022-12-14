@@ -1,34 +1,28 @@
-const express = require("express")
-const app = express()
-
+const express = require("express");
+const app = express();
 require("dotenv/config");
+const cors = require("cors");
+const { default: mongoose } = require("mongoose");
 
-const cors = require("cors")
-const {default : mongoose} = require("mongoose")
+app.use(cors({ origin: true }));
+app.use(express.json());
 
-app.use(cors({origin : true}))
-app.use(express.json())
+// user authentication routes
+const userRoute = require("./routes/auth");
+app.use("/api/users/", userRoute);
 
+// Artist links
+const artistsRoute = require("./routes/artists");
+app.use("/api/artists/", artistsRoute);
 
-app.get("/", (req, res) => {
-    return res.json("hi there...")
-})
+// Album links
+const albumRoute = require("./routes/albums");
+app.use("/api/albums/", albumRoute);
 
-//user authentication route
-const userRoute = require("./routes/auth")
-app.use("/api/users", userRoute)
+// Songs links
+const songRoute = require("./routes/songs");
+app.use("/api/songs/", songRoute);
 
-//album routes
-const albumRoute = require("./routes/album")
-app.use("/api/album", albumRoute)
-
-//artist routes
-const artistRoute = require("./routes/artist")
-app.use("/api/artist", artistRoute)
-
-//song routes 
-const songRoute = require("./routes/song")
-app.use("/api/song", songRoute)
 
 mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true });
 mongoose.connection

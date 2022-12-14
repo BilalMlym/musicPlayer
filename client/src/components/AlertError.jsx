@@ -22,3 +22,4 @@ const AlertError = ({ msg }) => {
 };
 
 export default AlertError;
+
