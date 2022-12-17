@@ -35,4 +35,4 @@ Helmet will be imported into any page component where you want to implement meta
 
 
 
-// 54 mın lesson 4.2
+// 5 lesson 54 min
