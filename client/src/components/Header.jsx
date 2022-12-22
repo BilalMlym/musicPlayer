@@ -91,7 +91,7 @@ const Header = () => {
             {user?.user?.name}
           </p>
           <p className="flex items-center gap-2 text-xs text-gray-500 font-normal">
-            Premium Memmber{" "}
+            Premium Member{" "}
             <FaCrown className="text-sm -ml-1 text-yellow-500" />
           </p>
         </div>

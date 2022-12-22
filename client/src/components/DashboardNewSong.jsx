@@ -30,6 +30,27 @@ import AlertError from "./AlertError";
 
 function DashboardNewSong() {
   const [songName, setsongName] = useState("");
+  const [{ allArtists, allAlbums }, dispatch] = useStateValue();
+
+  useEffect(() => {
+    if (!allArtists) {
+      getAllArtist().then((data) => {
+        dispatch({
+          type: actionType.SET_ARTISTS,
+          allArtists: data.artists,
+        });
+      });
+    }
+    if (!allAlbums) {
+      getAllAlbums().then((data) => {
+        dispatch({
+          type : actionType.SET_ALL_ALBUMS,
+          allAlbums : data.allAlbums
+        })
+      });
+    }
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center p-4 border border-gray-300 rounded-md gap-4">
       <input
@@ -40,8 +61,8 @@ function DashboardNewSong() {
         onChange={(e) => setsongName(e.target.value)}
       />
       <div className="flex w-full justify-between flex-wrap items-center gap-4">
-        <FilterButtons filterData={""} flag={"Artist"} />
-        <FilterButtons filterData={""} flag={"Albums"}></FilterButtons>
+        <FilterButtons filterData={allArtists} flag={"Artist"} />
+        <FilterButtons filterData={allAlbums} flag={"Albums"}></FilterButtons>
         <FilterButtons filterData={""} flag={"Languages"}></FilterButtons>
         <FilterButtons filterData={""} flag={"Category"}></FilterButtons>
       </div>
