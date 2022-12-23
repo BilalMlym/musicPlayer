@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"
 import { IoHome } from "react-icons/io5";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { DashboardNewSong } from ".";
@@ -13,6 +14,10 @@ import Header from "./Header";
 const Dashboard = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center bg-primary">
+      <Helmet>
+        <title>Music Player | Dashboard</title>
+        <meta name="dashboard page" content="Dashboard" />
+      </Helmet>
       <Header />
 
       <div className="w-[60%] my-2 p-4 flex items-center justify-evenly">

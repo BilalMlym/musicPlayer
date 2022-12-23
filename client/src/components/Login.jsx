@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { useStateValue } from "../Context/StateProvider"
 import { validateUser } from '../api'
 import { actionType } from '../Context/reducer'
+import { Helmet } from 'react-helmet'
 
 import {LoginBg} from "../assets/video"
 
@@ -60,6 +61,10 @@ if(window.localStorage.getItem(("auth") === "true")){
 
   return (
     <div className=' relative w-screen h-screen'>
+        <Helmet>
+        <title>Music Player | Login</title>
+        <meta name="Login page" content="Login" />
+      </Helmet>
         <video
         src={LoginBg}
         type="video/mp4"

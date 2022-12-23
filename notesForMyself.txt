@@ -35,4 +35,6 @@ Helmet will be imported into any page component where you want to implement meta
 
 
 
-// 5 lesson 54 min
+What is the flag in React?
+
+The react flag is a feature of the Node.js runtime that enables the use of modern JavaScript syntax and the React framework in server-side applications. When the react flag is passed to the Node.js interpreter at runtime, it enables the parsing and execution of JSX syntax, which is a extension of JavaScript that allows embedding HTML-like elements in JavaScript code.
