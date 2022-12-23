@@ -62,7 +62,7 @@ function DashboardNewSong() {
       />
       <div className="flex w-full justify-between flex-wrap items-center gap-4">
         <FilterButtons filterData={allArtists} flag={"Artist"} />
-        <FilterButtons filterData={allAlbums} flag={"Albums"}></FilterButtons>
+        <FilterButtons filterData={allAlbums} flag={"Albums"} />
         <FilterButtons filterData={""} flag={"Languages"}></FilterButtons>
         <FilterButtons filterData={""} flag={"Category"}></FilterButtons>
       </div>
