@@ -22,6 +22,7 @@ export const getAllArtist = async () => {
   } catch (error) {
     return null;
   }
+  
 };
 
 export const getAllUsers = async () => {
